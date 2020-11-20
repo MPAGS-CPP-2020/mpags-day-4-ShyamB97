@@ -110,7 +110,14 @@ std::string PlayfairCipher::applyCipher( const std::string& inputText, const Cip
         }
         else
         {
-            diagraph = l1 + "Z";
+            if(l1 != "Z")
+            {
+                diagraph = l1 + "Z";
+            }
+            else if(l1 == "Z")
+            {
+                diagraph = l1 + "X";
+            }
             j++;
         }
         diagraphs.push_back(diagraph);
